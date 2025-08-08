@@ -75,7 +75,6 @@ function Get-BrightspaceApiToken {
 			brightspaceServiceAccount	= New-Object PSCredential( (read-host -Prompt "Username for Brightspace Service Account"), (read-host -Prompt "Password for Brightspace Service Account" -asSecureString))
 			brightspaceAppAccount		= New-Object PSCredential( (read-host -Prompt "Client ID for Brightspace App Account")   , (read-host -Prompt "Client Secret for Brightspace App Account" -asSecureString))
 			}
-		mkdir $WorkingDirectory	
 		$credentials | Export-CliXml -Path "$($WorkingDirectory)\PSCredentials.$env:USERNAME@$env:USERDOMAIN.xml"
 	}
 	$brightspaceServiceAccountUsername	= $credentials.brightspaceServiceAccount.UserName	
@@ -176,4 +175,5 @@ function Get-BrightspaceApiToken {
 }
 		
 Export-ModuleMember -Function '*'
+
 
