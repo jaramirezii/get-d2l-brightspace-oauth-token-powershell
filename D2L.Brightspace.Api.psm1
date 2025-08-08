@@ -45,7 +45,7 @@ function Get-BrightspaceApiToken {
 	$myToken = Get-BrightspaceApiToken @params
 	#>
     param (
-        [string]$WorkingDirectory = "c:\scripts\brightspace",
+        [string]$WorkingDirectory = ".",
 		[Parameter(Mandatory=$true)]
 		[string]$Domain,
 		[Parameter(Mandatory=$true)]
@@ -176,3 +176,4 @@ function Get-BrightspaceApiToken {
 }
 		
 Export-ModuleMember -Function '*'
+
